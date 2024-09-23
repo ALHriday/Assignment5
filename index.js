@@ -39,6 +39,9 @@ function inputValueById(id) {
     return inputValueNum;
 };
 
+var totalAmountNum = 55000;
+
+document.getElementById('total-amount').innerText = totalAmountNum;
 
 let donationAmount = 0;
 let donationAmount2 = 0;
@@ -54,8 +57,10 @@ document.getElementById('donation-for-noakhali-btn').addEventListener('click', f
     }
 
     document.getElementById('noakhali-amount').innerText = donationAmount += donationValue;
+    document.getElementById('total-amount').innerText = totalAmountNum -= donationValue;
     const text = 'Taka is Donated for Flood at Noakhali, Bangladesh';
     history(donationHistorySection, donationValue, text);
+    document.getElementById('my_modal_5').showModal();
     document.getElementById('donation-for-noakhali').value = '';
 });
 
@@ -69,8 +74,10 @@ document.getElementById('donation-for-feni-btn').addEventListener('click', funct
     }
 
     document.getElementById('feni-amount').innerText = donationAmount2 += donationValue;
+    document.getElementById('total-amount').innerText = totalAmountNum -= donationValue;
     const text = 'Taka is Donated for Flood at Feni, Bangladesh';
     history(donationHistorySection, donationValue, text);
+    document.getElementById('my_modal_5').showModal();
     document.getElementById('donation-for-feni').value = '';
 });
 
@@ -84,8 +91,10 @@ document.getElementById('donation-for-injured-btn').addEventListener('click', fu
     }
 
     document.getElementById('donation-for-injured-amount').innerText = donationAmount3 += donationValue;
+    document.getElementById('total-amount').innerText = totalAmountNum -= donationValue;
     const text = 'Taka is Donated for injured in the Quota Movement';
     history(donationHistorySection, donationValue, text);
+    document.getElementById('my_modal_5').showModal();
     document.getElementById('donation-for-injured').value = '';
     
 });

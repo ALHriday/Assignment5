@@ -11,26 +11,26 @@
 
 <body>
     <header class="text-black sticky top-0 z-50">
-        <nav class="flex flex-col gap-2 md:gap-0 md:flex-row justify-evenly m-auto items-center bg-orange-100 p-4">
-            <div class="order-3 md:order-1"><button
-                    class="btn bg-green-500 text-xl font-bold border-none text-black hover:bg-green-600"><a
+        <nav class="flex flex-col gap-2 lg:gap-0 sm:flex-row justify-evenly m-auto items-center bg-orange-100 p-2 lg:p-4">
+            <div class="order-3 sm:order-1"><button
+                    class="btn bg-green-500 text-md font-bold border-none text-black hover:bg-green-600"><a
                         href="blog.html">Blog</a></button>
             </div>
-            <div class="flex order-1 md:order-2 items-center gap-2 ">
+            <div class="flex order-1 sm:order-2 items-center gap-2">
                 <img src="./assets/logo.png" alt="logo">
-                <p class="text-2xl md:text-3xl font-bold">Donate Bangladesh</p>
+                <p class="text-xl lg:text-3xl font-bold">Donate Bangladesh</p>
             </div>
             <div
-                class="flex order-2 md:order-3 border-2 px-4 py-2 rounded-md bg-gray-600 text-white items-center gap-2 text-xl font-bold">
+                class="flex order-2 sm:order-3 border-2 px-4 py-2 rounded-md bg-gray-600 text-white items-center gap-2 text-md font-bold">
                 <img src="./assets/coin.png" alt="">
-                <span>5500</span>
+                <span id="total-amount">55000</span>
                 <span>BDT</span>
             </div>
         </nav>
         <!-- Donation and History route Button section -->
-        <section class="flex justify-center items-center bg-slate-100 p-4 gap-4">
-            <div id="donation-btn" class="btn bg-green-500 text-xl font-bold border-none text-black">Donation</div>
-            <div id="history-btn" class="btn text-xl font-bold border-none text-black ">History</div>
+        <section class="flex justify-center items-center bg-slate-200 p-3 gap-4">
+            <div id="donation-btn" class="btn bg-green-500 text-lg font-bold border-none text-black">Donation</div>
+            <div id="history-btn" class="btn text-lg font-bold border-none text-black ">History</div>
         </section>
     </header>
 
@@ -38,12 +38,12 @@
 
         <!-- Donation Card Section -->
 
-        <section id="donation-card-section" class="mt-4 p-4 md:w-4/5 m-auto flex flex-col gap-8">
-            <div class="card card-side bg-base-100 grid grid-cols-1 md:grid-cols-2 gap-4 m-auto p-4 border-2">
-                <figure>
-                    <img src="./assets/noakhali.png" alt="" />
-                </figure>
-                <div class="flex flex-col justify-between gap-2">
+        <section id="donation-card-section" class="mt-4 p-4 md:w-4/5 m-auto grid grid-cols-1 gap-8">
+            <div class="card card-side bg-base-100 grid grid-cols-1 lg:grid-cols-2  gap-4 m-auto p-4 border-2">
+                <div>
+                    <img class="w-full h-full" src="./assets/noakhali.png" alt="" />
+                </div>
+                <div class="flex flex-col justify-between gap-2 lg:py-4">
                     <div class="flex items-center gap-2 text-xl font-bold p-2 bg-gray-200 w-40 rounded-md">
                         <img src="./assets/coin.png" alt="">
                         <span id="noakhali-amount">0</span>
@@ -53,23 +53,22 @@
                     <p>Join us in supporting the flood relief efforts in Noakhali, Bangladesh. Recent severe flooding
                         has devastated communities, displacing families and damaging homes and infrastructure. Your
                         generous donations will help provide essential supplies such as food, clean water, medical
-                        assistance, and shelter for those affected. Together, we can make a difference and help restore
-                        hope to the people of Noakhali. Thank you for your support!</p>
+                        assistance, and shelter for those affected.</p>
                     <input id="donation-for-noakhali" class="p-3 rounded-md border-2" type="number"
                         placeholder="Write Donation Amount">
                     <div class="card-actions">
-                        <button id="donation-for-noakhali-btn" onclick="my_modal_5.showModal()" class="btn bg-green-400 w-full text-xl font-bold">Donate
+                        <button id="donation-for-noakhali-btn" class="btn bg-green-400 w-full text-xl font-bold">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
 
             <div
-                class="card card-side bg-base-100 grid grid-cols-1 md:grid-cols-2 gap-4 md:flex-row m-auto p-4 border-2">
-                <figure>
-                    <img src="./assets/feni.png" alt="" />
-                </figure>
-                <div class="flex flex-col justify-between gap-2">
+                class="card card-side bg-base-100 grid grid-cols-1 lg:grid-cols-2 gap-4 md:flex-row m-auto p-4 border-2">
+                <div>
+                    <img class="w-full h-full" src="./assets/feni.png" alt="" />
+                </div>
+                <div class="flex flex-col justify-between gap-2 lg:py-4">
                     <div class="flex items-center gap-2 text-xl font-bold p-2 bg-gray-200 w-40 rounded-md">
                         <img src="./assets/coin.png" alt="">
                         <span id="feni-amount">0</span>
@@ -79,23 +78,22 @@
                     <p>Support flood relief efforts in Feni, Bangladesh, where devastating floods have impacted
                         countless lives. Your donations will provide vital assistance, including food, clean water,
                         medical care, and shelter for affected families. Every contribution helps restore hope and
-                        rebuild the community. Join us in making a difference for those in need. Thank you for your
-                        generosity!</p>
+                        rebuild the community.</p>
                     <input id="donation-for-feni" class="p-3 rounded-md border-2" type="number"
                         placeholder="Write Donation Amount">
                     <div class="card-actions">
-                        <button id="donation-for-feni-btn" onclick="my_modal_5.showModal()" class="btn bg-green-400 w-full text-xl font-bold">Donate
+                        <button id="donation-for-feni-btn" class="btn bg-green-400 w-full text-xl font-bold">Donate
                             Now</button>
                     </div>
                 </div>
             </div>
 
             <div
-                class="card card-side bg-base-100 grid grid-cols-1 md:grid-cols-2 gap-4 md:flex-row m-auto p-4 border-2">
-                <figure>
-                    <img src="./assets/quota-protest.png" alt="" />
-                </figure>
-                <div class="flex flex-col justify-between gap-2">
+                class="card card-side bg-base-100 grid grid-cols-1 lg:grid-cols-2 gap-4 md:flex-row m-auto p-4 border-2">
+                <div>
+                    <img class="w-full h-full" src="./assets/quota-protest.png" alt="" />
+                </div>
+                <div class="flex flex-col justify-between gap-2 lg:py-4">
                     <div class="flex items-center gap-2 text-xl font-bold p-2 bg-gray-200 w-40 rounded-md">
                         <img src="./assets/coin.png" alt="">
                         <span id="donation-for-injured-amount">0</span>
@@ -105,12 +103,11 @@
                     <p>Support the injured from the Quota Movement by contributing to our aid fund. Many individuals
                         have suffered injuries during recent protests advocating for equitable job opportunities and
                         educational access. Your donations will provide essential medical care, rehabilitation, and
-                        support for those affected. Together, we can help heal and empower the voices fighting for
-                        justice. Thank you for your support!</p>
+                        support for those affected.</p>
                     <input id="donation-for-injured" class="p-3 rounded-md border-2" type="number"
                         placeholder="Write Donation Amount">
                     <div class="card-actions">
-                        <button id="donation-for-injured-btn" onclick="my_modal_5.showModal()" class="btn bg-green-400 w-full text-xl font-bold">Donate
+                        <button id="donation-for-injured-btn" class="btn bg-green-400 w-full text-xl font-bold">Donate
                             Now</button>
                     </div>
                 </div>
@@ -120,7 +117,7 @@
 
         <!-- Donation History Section -->
         <section id="donation-history-section" class="md:w-4/5 m-auto p-6 mt-4 flex-col gap-6 hidden">
-            
+            <h1 class="p-4 text-2xl font-bold border-b-2 border-dashed">Donation History</h1>
         </section>
 
         <!-- Modal -->
