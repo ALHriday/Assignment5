@@ -103,7 +103,7 @@ function history(section, donationMoney,text) {
     const date = new Date();
 
     section.innerHTML += `
-    <div class="p-4 border-2 rounded-xl">
+    <div class="p-4 border-2 rounded-xl shadow-md">
         <h1 class="text-xl font-bold">${donationMoney} ${text}</h1>
         <p class="mt-3 p-2 bg-slate-200 rounded-md text-black">Date: ${date}</p>
     </div>
