@@ -5,8 +5,6 @@ const donationHistorySection = document.getElementById('donation-history-section
 const donationCardSection = document.getElementById('donation-card-section');
 
 
-// console.log(donationHistorySection, donationCardSection);
-
 // ....Click Handler for Donation and History Button.....
 
 donationBtn.addEventListener('click', function () {
@@ -53,7 +51,7 @@ document.getElementById('donation-for-noakhali-btn').addEventListener('click', f
     const donationValue = inputValueById('donation-for-noakhali');
     
     if (isNaN(donationValue) || typeof donationValue !== "number" || donationValue <= 0) {
-        return alert('invalid');
+        return alert('Invalid Donation Amount');
     }
 
     document.getElementById('noakhali-amount').innerText = donationAmount += donationValue;
@@ -70,7 +68,7 @@ document.getElementById('donation-for-feni-btn').addEventListener('click', funct
     const donationValue = inputValueById('donation-for-feni');
     
     if (isNaN(donationValue) || typeof donationValue !== "number" || donationValue <= 0) {
-        return alert('invalid');
+        return alert('Invalid Donation Amount');
     }
 
     document.getElementById('feni-amount').innerText = donationAmount2 += donationValue;
@@ -87,7 +85,7 @@ document.getElementById('donation-for-injured-btn').addEventListener('click', fu
     const donationValue = inputValueById('donation-for-injured');
     
     if (isNaN(donationValue) || typeof donationValue !== "number" || donationValue <= 0) {
-        return alert('invalid');
+        return alert('Invalid Donation Amount');
     }
 
     document.getElementById('donation-for-injured-amount').innerText = donationAmount3 += donationValue;
@@ -99,7 +97,7 @@ document.getElementById('donation-for-injured-btn').addEventListener('click', fu
     
 });
 
-// .......Reusable funtion for histoy........
+// .......Reusable funtion for history........
 
 function history(section, donationMoney,text) {
     const date = new Date();
@@ -107,7 +105,7 @@ function history(section, donationMoney,text) {
     section.innerHTML += `
     <div class="p-4 border-2 rounded-xl">
         <h1 class="text-xl font-bold">${donationMoney} ${text}</h1>
-        <p class="mt-3 p-2 bg-slate-200 rounded-md text-black">${date}</p>
+        <p class="mt-3 p-2 bg-slate-200 rounded-md text-black">Date: ${date}</p>
     </div>
     `;
 }
